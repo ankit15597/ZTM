@@ -1,0 +1,39 @@
+//Lecture 129 - Exercise: Objects & arrays for facebook app
+// Create an object and an array which we will use in our facebook exercise. 
+
+// 1. Create an object that has properties "username" and "password". Fill those values in with strings.
+// 2. Create an array which contains the object you have made above and name the array "database".
+// 3. Create an array called "newsfeed" which contains 3 objects with properties "username" and "timeline".
+
+//Solution:
+var obj = {username:"ankit", password:"xyz"};
+array database = [{username:"ankit", password:"xyz"}];
+var newsfeed = [{username:"Sanchit", feed:"I am prodigy"}, {username:"Richa", feed:"I am needy"}, {username:"Golu", feed:"I am needy too"}];
+
+//Exercise Building Facebook:
+- Test the username & password against the DB.
+- If true, show news feed, else prompt invalid username and password.
+- Inbuilt JS function to take I/p -> prompt()
+- Inbuilt JS function to display o/p -> alert()
+
+//Solution:
+var database = [{username:"Ankit", password:"yolo"}];
+
+var newsfeed = [{username:"Sanchit", feed:"I am prodigy"}, {username:"Richa", feed:"I am needy"}, {username:"Golu", feed:"I am needy too"}, {username:"TFI", feed:"I am full of drama kings & queens"}];
+
+var enteredUsername = prompt("Enter your username");
+var enteredPassword = prompt("Enter your password");
+
+function authenticate(){
+
+if (enteredUsername===database[0].username && enteredPassword===database[0].password) {
+	console.log(newsfeed);
+}
+
+else {
+	alert("Invalid username & password");
+}
+
+}
+
+authenticate();
